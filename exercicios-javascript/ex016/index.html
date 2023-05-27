@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escalação do Time</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Escalação do Time</h1>
+  </header>
+
+  
+  <main id="main-section">
+
+    <div class="forms">
+
+      <div class="escalar-jogador">
+
+        <h2>Escalar um(a) jogador(a)</h2>
+
+          <div class="player-position">
+            <label for="playerPosition">Informe qual a posição do jogador(a): </label>
+            <br>
+            <input type="text" id="playerPosition" name="playerPosition">
+          </div>
+          
+          <div class="player-name">
+            <label for="playerName">Informe o nome do jogador(a): </label>
+            <br>
+            <input type="text" id="playerName" name="playerName">
+          </div>
+          
+          <div class="shirt-number-to-remove">
+            <label for="shirtNumber">Informe o número da camisa dele(a): </label>
+            <br>
+            <input type="number" id="shirtNumber" name="shirtNumber">
+          </div>
+    
+          <button onclick="escalarJogador()">Escalar</button>
+  
+      </div>
+  
+      <div class="remover-jogador">
+  
+        <h2>Remover um(a) jogador(a)</h2>
+
+          <div class="shirt-number">
+            <label for="shirtNumberToRemove">Informe o número da camisa dele(a): </label>
+            <br>
+            <input type="number" id="shirtNumberToRemove" name="shirtNumberToRemove">
+          </div>
+  
+          <button onclick="removerJogador()">Remover esse(a) jogador(a)</button>
+  
+      </div>
+
+    </div>
+
+    <div id="jogadores-escalados">
+      <h3>Jogadores escalados(as): </h3>
+
+      <div id="camisa10">
+        <h4>Thiago Diogo</h4>
+        <ul>
+          <li>Posição do Jogador: Atacante</li>
+          <li>Número da Camisa: 10</li>
+        </ul>
+      </div>
+
+      <div id="camisa1">
+        <h4>Emanuelly Valenga</h4>
+        <ul>
+          <li>Posição do Jogador: Goleiro</li>
+          <li>Número da Camisa: 1</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
