@@ -10,80 +10,79 @@
 </head>
 <body>
 
-  <header>
-    <h1>Escalação do Time</h1>
-  </header>
+  <div class="everything">
 
+    <main id="main-section">
+
+      <div class="forms">
   
-  <main id="main-section">
+        <div class="escalar-jogador">
+          <h2 class="titulo-escalar">Escalar Jogador</h2>
 
-    <div class="forms">
+            <div class="player-position">
+              <label for="playerPosition">Informe qual a posição do jogador:</label>
+              <input type="text" id="playerPosition" name="playerPosition">
+            </div>
 
-      <div class="escalar-jogador">
+            <div class="player-name">
+              <label for="playerName">Informe o nome do jogador:</label>
+              <input type="text" id="playerName" name="playerName">
+            </div>
 
-        <h2>Escalar um(a) jogador(a)</h2>
+            <div class="shirt-number-to-remove">
+              <label for="shirtNumber">Informe o número da camisa:</label>
+              <input type="number" id="shirtNumber" name="shirtNumber">
+            </div>
 
-          <div class="player-position">
-            <label for="playerPosition">Informe qual a posição do jogador(a): </label>
-            <br>
-            <input type="text" id="playerPosition" name="playerPosition">
-          </div>
-          
-          <div class="player-name">
-            <label for="playerName">Informe o nome do jogador(a): </label>
-            <br>
-            <input type="text" id="playerName" name="playerName">
-          </div>
-          
-          <div class="shirt-number-to-remove">
-            <label for="shirtNumber">Informe o número da camisa dele(a): </label>
-            <br>
-            <input type="number" id="shirtNumber" name="shirtNumber">
-          </div>
+            <button onclick="escalarJogador()">Escalar</button>
+        </div>
     
-          <button onclick="escalarJogador()">Escalar</button>
+        <div class="remover-jogador">
+    
+          <h2 class="titulo-remover">Remover um jogador</h2>
+  
+            <div class="shirt-number">
+              <label for="shirtNumberToRemove">Informe o número da camisa:</label>
+              <br>
+              <input type="number" id="shirtNumberToRemove" name="shirtNumberToRemove">
+            </div>
+    
+            <button onclick="removerJogador()">Remover esse jogador</button>
+    
+        </div>
   
       </div>
   
-      <div class="remover-jogador">
+    </main>
   
-        <h2>Remover um(a) jogador(a)</h2>
-
-          <div class="shirt-number">
-            <label for="shirtNumberToRemove">Informe o número da camisa dele(a): </label>
-            <br>
-            <input type="number" id="shirtNumberToRemove" name="shirtNumberToRemove">
-          </div>
+    <section id="section-escalados">
   
-          <button onclick="removerJogador()">Remover esse(a) jogador(a)</button>
+      <div id="jogadores-escalados">
+        <h2 class="titulo-escalados">Jogadores Escalados</h2>
+    
+        <div id="camisa10">
+          <h4>Thiago Diogo</h4>
+          <ul>
+            <li>Posição do Jogador: Atacante</li>
+            <li>Número da Camisa: 10</li>
+          </ul>
+        </div>
+    
+        <div id="camisa1">
+          <h4>Emanuelly Valenga</h4>
+          <ul>
+            <li>Posição do Jogador: Goleiro</li>
+            <li>Número da Camisa: 1</li>
+          </ul>
+        </div>
+    
+      </div>
   
-      </div>
+    </section>
 
-    </div>
-
-    <div id="jogadores-escalados">
-      <h3>Jogadores escalados(as): </h3>
-
-      <div id="camisa10">
-        <h4>Thiago Diogo</h4>
-        <ul>
-          <li>Posição do Jogador: Atacante</li>
-          <li>Número da Camisa: 10</li>
-        </ul>
-      </div>
-
-      <div id="camisa1">
-        <h4>Emanuelly Valenga</h4>
-        <ul>
-          <li>Posição do Jogador: Goleiro</li>
-          <li>Número da Camisa: 1</li>
-        </ul>
-      </div>
-
-    </div>
-
-  </main>
-
+  </div>
+  
+  
   <script src="script.js"></script>
 </body>
 </html>
