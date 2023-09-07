@@ -1,114 +1,57 @@
-# Introdução à Programação Orientada a Objetos (POO)
+# Polimorfismo
 
-A Programação Orientada a Objetos (POO) é um paradigma de programação que utiliza objetos e classes para organizar o código. Vamos explorar os conceitos básicos passo a passo:
+O polimorfismo, outro pilar fundamental da programação orientada a objetos (OOP), permite que objetos de diferentes classes sejam tratados como objetos de uma superclasse comum, facilitando a escrita de código mais flexível e reutilizável. Aqui está uma análise profunda deste conceito, acompanhada por dicas e exercícios práticos:
 
-## 1. Objetos
+## 1. Sobreposição de Métodos (Override)
 
-Objetos são instâncias de classes que contêm propriedades (atributos) e comportamentos (métodos). Você pode pensar em um objeto como um "item" individual que possui certas características e pode realizar determinadas ações.
-
-```javascript
-let carro = {
-  marca: "Toyota",
-  modelo: "Corolla",
-  ano: 2005,
-  ligar: function() {
-    console.log("O carro está ligando...");
-  }
-};
-```
-
-## 2. Classes
-
-Classes são "moldes" a partir dos quais os objetos são criados. Elas encapsulam propriedades e métodos que serão compartilhados por todos os objetos criados a partir dela.
-
-```javascript
-class Carro {
-  constructor(marca, modelo, ano) {
-    this.marca = marca;
-    this.modelo = modelo;
-    this.ano = ano;
-  }
-
-  ligar() {
-    console.log("O carro está ligando...");
-  }
-}
-
-let meuCarro = new Carro("Toyota", "Corolla", 2005);
-```
-
-## 3. Herança
-A herança permite que você crie uma nova classe com base em uma classe existente, herdando suas propriedades e comportamentos, e permitindo a adição de novas propriedades e comportamentos.
-
-```javascript
-class VeiculoEletrico extends Carro {
-  constructor(marca, modelo, ano, autonomiaBateria) {
-    super(marca, modelo, ano);
-    this.autonomiaBateria = autonomiaBateria;
-  }
-
-  carregarBateria() {
-    console.log("Carregando a bateria...");
-  }
-}
-
-let meuVeiculoEletrico = new VeiculoEletrico("Tesla", "Model S", 2020, 500);
-```
-
-## 4. Encapsulamento
-O encapsulamento é o processo de proteger os dados internos de um objeto e garantir que a interação com os atributos do objeto seja feita através de métodos específicos.
-
-```javascript
-class ContaBancaria {
-  constructor(saldo) {
-    this._saldo = saldo; // Atributo privado
-  }
-
-  depositar(valor) {
-    this._saldo += valor;
-  }
-
-  sacar(valor) {
-    if (valor <= this._saldo) {
-      this._saldo -= valor;
-    } else {
-      console.log("Saldo insuficiente");
-    }
-  }
-
-  verificarSaldo() {
-    console.log("Saldo atual: " + this._saldo);
-  }
-}
-```
-
-## 5. Polimorfismo
-O polimorfismo permite que métodos com o mesmo nome comportem-se de maneira diferente dependendo da classe ou do objeto que os está chamando.
+A sobreposição de métodos ocorre quando uma classe herda de outra classe e então modifica o comportamento de um ou mais métodos herdados para adaptá-los às suas necessidades específicas.
 
 ```javascript
 class Animal {
-  fazerSom() {
-    console.log("Um som genérico de animal");
+  falar() {
+    console.log('O animal está fazendo um som.');
   }
 }
 
-class Cao extends Animal {
-  fazerSom() {
-    console.log("Latido");
+class Cachorro extends Animal {
+  falar() {
+    console.log('O cachorro está latindo.');
   }
 }
-
-class Gato extends Animal {
-  fazerSom() {
-    console.log("Miau");
-  }
-}
-
-let meuAnimal = new Animal();
-let meuCao = new Cao();
-let meuGato = new Gato();
-
-meuAnimal.fazerSom(); // Um som genérico de animal
-meuCao.fazerSom();    // Latido
-meuGato.fazerSom();   // Miau
 ```
+
+## 2. Sobrecarga de Métodos (Overload)
+
+A sobrecarga de métodos é um conceito onde múltiplos métodos podem ter o mesmo nome, mas com parâmetros diferentes. Infelizmente, JavaScript não suporta sobrecarga de métodos diretamente, mas você pode simular isso verificando os argumentos recebidos na função.
+
+```javascript
+class Calculadora {
+  somar(...args) {
+    return args.reduce((acc, current) => acc + current, 0);
+  }
+}
+```
+
+# Dicas:
+
+## Reutilização de Código:
+
+### Herança para Reutilização:
+Utilize a herança para promover a reutilização de código, evitando a duplicação de código comum entre várias classes.
+
+### Flexibilidade de Código:
+O polimorfismo facilita a adição de novas classes ao seu sistema, muitas vezes sem exigir nenhuma modificação nas classes existentes.
+
+## Exercícios Práticos:
+
+### Exercício 1:
+Desenvolva uma classe `Funcionario` com métodos para calcular o salário anual e o bônus anual. Em seguida, crie classes como `Gerente` e `Desenvolvedor` que herdam de `Funcionario` e sobrescrevem o método de cálculo do bônus de acordo com as regras específicas de cada cargo.
+#### Regras de Bônus
+##### Gerente:
+1. **Bônus de Participação em Projetos:** Um bônus adicional de 2% pode ser concedido com base no número de projetos nos quais o gerente participou.
+2. **Bônus de Longevidade:** Um bônus incremental com base no número de anos de serviço na empresa.
+##### Desenvolvedor:
+1. **Bônus de Participação em Projetos:** Um bônus adicional de 2% pode ser concedido com base no número de projetos nos quais o desenvolvedor participou.
+
+### Exercício 2:
+Implemente uma classe `CalculadoraPolimorfica` que possui um método `calcular` que pode receber diferentes tipos de operações (soma, subtração, multiplicação, divisão) e realiza o cálculo de acordo com o tipo de operação fornecido, demonstrando assim uma forma de sobrecarga de método.
