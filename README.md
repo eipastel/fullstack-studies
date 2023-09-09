@@ -40,13 +40,23 @@ Aqui está um exemplo de um dos primeiros exercícios que realizei:
 
 Aqui, você encontrará um registro detalhado do meu progresso e das importantes adições e mudanças que fiz no repositório ao longo do tempo.
 
-### Agosto 2023 
+### Setembro 2023 
 
 - **Programação Orientada a Objetos**
   - Concluí um desafio significativo que integra todos os cinco pilares **(objetos, classes, heranças, encapsulamento e polimorfismo)** da programação orientada a objetos, demonstrando a aplicação prática dos conceitos aprendidos. Dê uma olhada no desafio concluído [aqui](/frontend/javascript/Programação%20Orientada%20a%20Objetos%20(POO)/6%23%20exercicios-finais).
 
 - **Início dos Estudos de Flexbox**
   - Comecei a explorar os conceitos básicos de Flexbox, adicionando exercícios práticos e teóricos ao repositório.
+
+- **Operações Assíncronas e Callbacks em JavaScript**
+  - Iniciados estudos detalhados sobre operações assíncronas e o conceito de callbacks em JavaScript. Realizei uma série de exercícios práticos que me ajudaram a solidificar meu entendimento sobre como implementar e utilizar callbacks, especialmente em contextos assíncronos.
+  - Desenvolvi uma compreensão profunda de como usar callbacks para manipular erros de forma eficaz em operações assíncronas.
+  - Confira minhas anotações e exercícios sobre callbacks [aqui](frontend/javascript/Funções%20Assíncronas).
+
+- **Erro e Manipulação de Exceções**
+  - Aprofundei meus conhecimentos sobre a manipulação de erros em JavaScript, incluindo a criação de classes de erro personalizadas e a utilização de blocos try/catch para gerenciar exceções de forma eficaz.
+  - Realizei exercícios práticos que me permitiram aplicar os conceitos aprendidos de uma maneira hands-on.
+  - Veja minhas notas detalhadas e exemplos de código [aqui](frontend/javascript/Funções%20Assíncronas/%233%20erro-manipulacao-de-excecoes).
 
 ---
 
